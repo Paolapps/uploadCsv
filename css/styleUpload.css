@@ -1,5 +1,5 @@
 html{    
-  background:url(../images/background-form.jpg) no-repeat;
+  background:url(../images/bg-02.jpg) no-repeat;
   background-size: cover;
   height:100%;
 }
@@ -13,11 +13,11 @@ h1, h2 {
   margin-bottom: 5px;
   font-weight: normal;
   text-align: center;
-  color:#aaa;
+  color:#eee;
 }
 h2 {
   margin: 5px 0 2em;
-  color: #1ABC9C;
+  color: #14d1ab;
 }
 form {
   width: 225px;
@@ -31,18 +31,18 @@ h2 + P {
   margin-top: 4em;
   font-size: .9em;
   text-align: center;
-  color: #aaa;
+  color: #eee;
 }
 .copy {
  margin-top: 2em; 
 }
 .copy a {
  text-decoration: none;
- color: #1ABC9C;
+ color: #14d1ab;
 }
 
 #form-div {
-	background-color:rgba(72,72,72,0.8);
+	background-color:rgba(40,40,40,0.6);
 	padding-left:35px;
 	padding-right:35px;
 	padding-top:35px;

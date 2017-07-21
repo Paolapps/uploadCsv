@@ -1,5 +1,8 @@
-<!doctype html>
+<?php
+	include_once 'connection.php';
+?>
 
+<!doctype html>
 <html lang="en">
 	<head>
 	  <meta charset="utf-8">
@@ -16,8 +19,8 @@
 		  <h1>Programming PHP Evaluation</h1>
 			<h2>Paola Sanabria</h2>
 
-		    <form class="form" id="form1" action="upload.php" method="post" enctype="multipart/form-data"> 
-		      <p><input type="file" name="fileToUpload" id="fileToUpload"></p>
+		    <form class="form" id="form1" action="insert.php" method="post" enctype="multipart/form-data"> 
+		      <p><input type="file" name="csv" id="csv"></p>
 			   <button type="submit" class="btnSubmit" value="Submit">Upload .csv file</button>
 	        </form>
 
