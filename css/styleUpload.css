@@ -1,7 +1,10 @@
 html{    
-  background:url(../images/bg-02.jpg) no-repeat;
+  background:url(../images/bg-02.jpg);
+  min-height:650px;
+  background-position: bottom;
   background-size: cover;
-  height:100%;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
 body {
@@ -28,7 +31,7 @@ h2 + P {
   text-align: center;
 }
 .txtcenter {
-  margin-top: 4em;
+  margin-top: 2em;
   font-size: .9em;
   text-align: center;
   color: #eee;
@@ -52,6 +55,7 @@ h2 + P {
 	left: 50%;
 	position: absolute;
     margin-top:80px;
+    margin-bottom: 40px;
 	margin-left: -260px;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
