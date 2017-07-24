@@ -7,6 +7,10 @@
 
     File: user_upload.php
     Description: Html form for file uploading, redirecting to insert.php 
+  				 Processes the action of the uploading form
+                1. Saving the file by default in a temporary folder  
+                2. Testing if file is .csv
+                3. Redirecting the file to a known TempStorage folder
  */
 
 	include_once 'connection.php';
@@ -64,7 +68,7 @@
   			
   			//----------------------------------------------------move file to new directory
 				    $folder="TempStorage/";//-------------------------uploadCsv/TempStorage/
-				    
+
 				    foreach ($_FILES as $key) {
 				        $fileName = $key['name'];
 				        $folder_tmp = $key["tmp_name"];
@@ -78,7 +82,6 @@
 				        }
 				        else{
 				            if(move_uploaded_file($folder_tmp, $directory)){
-				                echo '<center>Your file has been uploaded</center>';
 				                insertData();
 				            }
 				            else
