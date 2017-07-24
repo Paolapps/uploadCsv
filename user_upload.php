@@ -3,7 +3,7 @@
 /*  Evaluacion Programming php
     Presented by: Paola Sanabria
     To: Catalyst IT
-    Date: 22/07/17
+    Date: 24/07/17
 
     File: user_upload.php
     Description: Html form for file uploading, redirecting to insert.php 
@@ -81,15 +81,22 @@
 				            throw new RuntimeException('<center>Opps! Invalid file format.</center>');
 				        }
 				        else{
-				            if(move_uploaded_file($folder_tmp, $directory)){
-				                insertData();
-				            }
-				            else
-				            	throw new RuntimeException('<center>Failed the uploading</center>');
+				        	try{
+					            if(move_uploaded_file($folder_tmp, $directory)){
+					                insertData();
+					            }
+					            else
+					            	throw new RuntimeException('<center>Failed the uploading</center>');
+					        }
+					        catch(PDOException $error){
+								//Display error message if the upload fails
+								echo "Opps! An error occured: ".$error->getMessage();
+							}
 				        }
 				    }
 
-				} catch (RuntimeException $e) {
+				} 
+				catch (RuntimeException $e) {
 				    echo $e->getMessage();
 				}
 				
